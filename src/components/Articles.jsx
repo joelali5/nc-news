@@ -29,7 +29,7 @@ export default function Articles() {
                     name="sortValue"
                     onChange={handleChange}
                 >
-                    <option value="created_at">--choose--</option>
+                    <option value="created_at">--sort Article--</option>
                     <option value="comment_count">comment_count</option>
                     <option value="votes">votes</option>
                     <option value="title">title</option>
@@ -37,14 +37,14 @@ export default function Articles() {
                     <option value="author">author</option>
                 </select>
             </form>
-            <div className='articles'>
+            <div className='articles-container'>
             {articles.map(article => {
-            return <li key={article.article_id} className='article'><Link to={`/articles/${article.article_id}`} className="article-link">
+            return <div key={article.article_id} className='article'><Link to={`/articles/${article.article_id}`} className="article-link">
                 <h2 className="article-title">Title: {article.title}</h2>
                 <h2 className="article-topic">{article.topic}</h2>
                 <h4 className="article-author">Author: {article.author}</h4>
                 <p className="article-body">{article.body}</p>
-            </Link></li>
+            </Link></div>
             })}
             </div>
         </div>

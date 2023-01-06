@@ -1,25 +1,40 @@
-.App{
-  padding: 1em;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap');
+/* Roboto Mono, monospace*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+/* Ubuntu, sans serif */
 h1, h2, h4, p{
   margin: 0;
-  margin-bottom: .75em;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  background-color: #3a07a9;
+  margin-bottom: .8em;
+  padding: 1.3em;
+}
+
+
+
+.sort-values{
+  text-align: center;
+}
+
+.sort-drop-down {
+  padding: .3em;
+  background-color: #544CA6;
+  cursor: pointer;
 }
 
 .link{
-  padding: 0 .2em;
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 1.4em;
+  display: block;
+  color: #ccc;
   text-decoration: none;
-  color: #444;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1px;
+  font-size: .8rem;
+  font-weight: 700;
+  border-bottom: 1px dashed #ccc;
 }
 
 .link:hover,
@@ -28,22 +43,25 @@ h1, h2, h4, p{
 }
 
 .header{
-  font-size: 1.2em;
-  font-family:'Courier New', Courier, monospace;
-  color: #ad493c;
+  font-size: 1.5em;
+  color: #ccc;
   margin: 0;
 }
 
 .header-link { text-decoration: none; }
 
-.articles{
+.articles-container{
   margin: 1em auto;
   list-style: none;
+  width: 80%;
 }
 
 .article {
-  border-top: 1px solid #1f6551;
+  border: 1px solid #1f6551;
   padding-top: .7em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .article-link{
@@ -51,8 +69,8 @@ h1, h2, h4, p{
 }
 
 .article-title{
-  font-family: monospace;
-  font-size: 1.4em;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
   color: #444;
 }
 
@@ -137,7 +155,6 @@ h1, h2, h4, p{
   display: flex;
   justify-content: space-between;
 }
-/* .date-created { margin-right: 2em;} */
 
 .comment-link{
   font-size: 1.1em;
@@ -268,37 +285,4 @@ h1, h2, h4, p{
   color: #52623b;
   font-size: 1.2em;
   padding-top: .7em;
-}
-
-
-/* Media */
-@media only screen and (min-width: 500px) {
-  .articles{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .nav {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .article {
-    width: 45%;
-    border: 1px solid #1f6551;
-    margin-bottom: 1em;
-    padding: .3em;
-    border-radius: 5px;
-  }
-
-  .header {
-    font-size: 1.5em;
-  }
-  
-}
-
-@media only screen and (min-width: 800px) {
-  .article {
-    width: 30%;
-  }
 }
