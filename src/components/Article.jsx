@@ -56,14 +56,14 @@ export default function SingleArticle() {
       <h4 className="article-author">Author: {article.author}</h4>
       <p className="article-body">{article.body}</p>
       <div className="article-details">
-        <p className="article-detail created">created: {article.created_at}</p>
-        <div className="article-detail">votes:
-            <p className="vote-btn btn-dec" onClick={!downVote ? decVotes : null}>-</p>
-            <p className="vote-btn btn-inc" onClick={!upVote ? incVotes : null}>+</p>
-            {article.votes}
+        <p className="article-created">created: {article.created_at}</p>
+        <div className="votes-btn">votes
+            <button className="vote-btn btn-dec" onClick={!downVote ? decVotes : null}>👎🏼</button>
+            <button className="vote-btn btn-inc" onClick={!upVote ? incVotes : null}>👍🏼</button>
+            <span className="votes-count">{article.votes}</span>
         </div>
       </div>
-      <p className="article-detail">comment-count: {article.comment_count}</p>
+      <p className="article-comment-count">comment-count: {article.comment_count}</p>
       <Link to={`/articles/${article_id}/comments`} className="comment-link">
         comments
       </Link>

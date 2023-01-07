@@ -6,14 +6,16 @@ h1, h2, h4, p{
   margin: 0;
 }
 
+.App{
+  min-height: 100vh;
+}
+
 .nav {
   text-align: center;
   background-color: #3a07a9;
   margin-bottom: .8em;
   padding: 1.3em;
 }
-
-
 
 .sort-values{
   text-align: center;
@@ -23,6 +25,7 @@ h1, h2, h4, p{
   padding: .3em;
   background-color: #544CA6;
   cursor: pointer;
+  color: #ccc;
 }
 
 .link{
@@ -39,13 +42,18 @@ h1, h2, h4, p{
 
 .link:hover,
 .link:focus{
-  color: rgb(231, 58, 58);
+  color: #cd7a2d;
 }
 
 .header{
   font-size: 1.5em;
   color: #ccc;
   margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header-link{
+  text-decoration: none;
 }
 
 .header-link { text-decoration: none; }
@@ -54,14 +62,16 @@ h1, h2, h4, p{
   margin: 1em auto;
   list-style: none;
   width: 80%;
+  min-height: 100vh;
 }
 
 .article {
-  border: 1px solid #1f6551;
-  padding-top: .7em;
+  margin: 0 auto;
+  border: 1px solid #3a07a9;
   margin-bottom: 1em;
-  padding: 1em;
-  border-radius: 5px;
+  padding: 1em 1.5em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .article-link{
@@ -71,22 +81,67 @@ h1, h2, h4, p{
 .article-title{
   font-family: 'Roboto Mono', monospace;
   font-size: 1.2rem;
-  color: #444;
+  color: #544ca6;
 }
 
 .article-topic{
   font-size: 1.4em;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #1f6551;
+  color: #cd7a2d;
 }
 
 .article-author{
-  color: #859889;
+  color: #444;
+  font-size: .8rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .article-body{
   color: #444;
+  font-size: 1.1rem;
 }
+
+.article-created{
+  background-color: #544CA6;
+  align-self: center;
+  padding: .35em;
+  border-radius: 3px;
+  color: #ccc;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+.votes-btn {
+  display: flex;
+  font-size: 1.3rem;
+  font-family: 'Ubuntu', sans-serif;
+  margin-right: .8em;
+}
+
+.vote-btn{
+  margin: .4em;
+  padding: .3em;
+  color: #ccc;
+  border-radius: 100px;
+  background-color: #544CA6;
+  border: 0;
+}
+
+.votes-count {
+  font-size: 1.3rem;
+}
+
+.article-comment-count{
+  font-size: 1.2rem;
+  background: #544CA6;
+  display: inline-block;
+  padding: .24em;
+  color: #ccc;
+  border-radius: 4px;
+  margin-right: .6em;
+}
+
+
 
 .loading{
   text-align: center;
@@ -133,23 +188,9 @@ h1, h2, h4, p{
   display: flex;
 }
 
-.vote-btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 .3em;
-  background-color: #5a6d5e;
-  height: 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: #FFF;
-}
 
-.btn-dec{
-  padding: 0 .4em;
-}
 
-.btn-inc{ padding: 0 .3em;}
+
 
 .comment-details{
   display: flex;
@@ -157,30 +198,24 @@ h1, h2, h4, p{
 }
 
 .comment-link{
-  font-size: 1.1em;
+  font-size: 1.3rem;
   text-decoration: none;
-  color: #444;
+  color: #ccc;
+  background-color: #544CA6;
+  padding: .55rem;
+  border-radius: 3px;
 }
 .comment-link:hover,
 .comment-link:focus{
-  color: #ad493c;
+  background-color: #cd7a2d;
+  color: #ccc;
 }
 
-.article-details,
-.article-detail,
-.comment-link{
-  display: flex;
-  color: #52623b;
-  font-weight: bold;
-}
+
 
 .delete-comment {
   font-size: .5em;
   cursor: pointer;
-}
-
-.created{
-  margin-right: 1.5em;
 }
 
 .users {
@@ -286,3 +321,13 @@ h1, h2, h4, p{
   font-size: 1.2em;
   padding-top: .7em;
 }
+
+.footer {
+  margin: 0;
+  background: #3a07a9;
+  padding: 2em;
+  text-align: center;
+  color: #ccc;
+  font-size: 1rem;
+}
+

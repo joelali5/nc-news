@@ -7,7 +7,7 @@ export default function Nav() {
     return (
         <div className="nav">
             <div>
-                <h1 className="header">NEWS</h1>
+                <Link to={'/'} className='header-link'><h1 className="header">NEWS</h1></Link>
             </div>
             <p className="logged-in-user">{user.username}</p>
             <div className="nav-links">

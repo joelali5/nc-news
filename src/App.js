@@ -6,6 +6,7 @@ import Comments from './components/Comments';
 import Users from './components/Users';
 import Nav from './components/Nav';
 import Topics from './components/Topics';
+import Footer from './components/Footer';
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
         <Route path='/users' element={<Users />} />
         <Route path='/topics/:topic' element={<Topics />} />
       </Routes>
+      <Footer />
     </div>
 
   );
