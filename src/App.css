@@ -35,9 +35,10 @@ h1, h2, h4, p{
   text-transform: uppercase;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1px;
+  padding: 1em 0;
   font-size: .8rem;
   font-weight: 700;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dotted #ccc;
 }
 
 .link:hover,
@@ -302,20 +303,17 @@ h1, h2, h4, p{
 .topics{
   padding: 0;
   list-style: none;
-  display: flex;
-  background: #859889;
-  padding: .8em 0;
-  border-radius: 5px;
-  justify-content: space-around;
+  text-align: center;
 }
 
 .topic{
-  font-size: 1.2em;
+  font-size: .75rem;
   text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-family: monospace;
-  color: #454648;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: #847dcb;
+  border-radius: 5px;
+  color: #444;
   cursor: pointer;
 }
 
@@ -365,8 +363,20 @@ h1, h2, h4, p{
   .link{
     border-bottom: 0;
     margin-left: 1em;
-  };
+  }
+
+  .topics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topic{
+    padding: .5em;
+    margin-right: 1em;
+  }
 }
+
 
 @media only screen and (min-width: 768px) {
   .nav-container{

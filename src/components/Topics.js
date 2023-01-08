@@ -26,15 +26,15 @@ export default function Topics() {
         <div>
             <ul className="topics">{
                 topics.map(topic => {
-                    return <Link to={`/topics/${topic.slug}`} key={topic.slug}><li className="topic">
+                    return <Link to={`/topics/${topic.slug}`} key={topic.slug} className="topic"><li>
                         {topic.slug}
                     </li></Link>
                 })}
             </ul> 
-            <div className="article">
+            <div className="articles-container">
                 {
                     topicArticles.map(article => {
-                        return <div key={article.article_id}>
+                        return <div key={article.article_id} className='article'>
                             <h2 className="article-title">Title: {article.title}</h2>
                             <h2 className="article-topic">{article.topic}</h2>
                             <h4 className="article-author">Author: {article.author}</h4>
