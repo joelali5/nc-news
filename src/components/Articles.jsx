@@ -14,6 +14,8 @@ export default function Articles() {
         setSearchParams({sort_by : sortValue});
     }
 
+    console.log(searchParams);
+
     useEffect(() => {
         getArticles(sortValue).then(articlesData => {
             setArticles(articlesData);
