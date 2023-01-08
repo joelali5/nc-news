@@ -39,8 +39,10 @@ export default function AddComment({ setComments, comments }) {
 
   return err ? (<p className="error-msg">{err}</p>) : (
     <form className="comment-group" onSubmit={handleSubmit}>
-      <input
+      <textarea
         type="text"
+        rows="4"
+        cols="40"
         placeholder="Add a comment"
         className="comment-input"
         value={body}
