@@ -259,11 +259,11 @@ h1, h2, h4, p{
   display: flex;
   flex-direction: column;
   width: 40%;
-  border: 1px solid #1f6551;
+  border: 1px solid #3a07a9;
   margin: 0 auto;
   margin-bottom: 1em;
   padding: 1em;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .user-avatar{
@@ -274,25 +274,28 @@ h1, h2, h4, p{
 .username{
   margin: 0;
   font-size: 1.1em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
   text-transform: capitalize;
-  color: #52623b;
-  font-weight: bold;
-  font-family: monospace;
+  color: #847dcb;
   margin-bottom: .4em;
   text-align: center;
 }
 
 .login-btn{
   padding: .5em 0;
-  background-color: #9b9ca1;
-  border-radius: 10px;
+  background-color: #3a07a9;
+  color: #ccc;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
   border: none;
   justify-self: center;
   cursor: pointer;
 }
 
-.login-btn:hover{
-  background-color: #ad493c;
+.login-btn:hover,
+.login-btn:focus{
+  background-color: #cd7a2d;
   color: #FFF;
 }
 
@@ -420,6 +423,17 @@ h1, h2, h4, p{
     width: 50%;
     margin: 0 auto;
     margin-bottom: 1.5em;
+  }
+
+  .users{
+    padding: 1.3em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+
+  .user{
+    flex: 1 200px;
   }
 }
 
