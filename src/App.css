@@ -46,7 +46,7 @@ h1, h2, h4, p{
 }
 
 .header{
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #ccc;
   margin: 0;
   font-family: "Ubuntu", sans-serif;
@@ -67,11 +67,11 @@ h1, h2, h4, p{
 
 .article {
   margin: 0 auto;
-  border: 1px solid #3a07a9;
   margin-bottom: 1em;
   padding: 1em 1.5em;
   margin-left: 1em;
   margin-right: 1em;
+  box-shadow: inset 0 -2em 2em rgba(0, 0, 0, 0.1);
 }
 
 .article-link{
@@ -85,7 +85,7 @@ h1, h2, h4, p{
 }
 
 .article-topic{
-  font-size: 1.4em;
+  font-size: 1.4rem;
   color: #cd7a2d;
 }
 
@@ -142,56 +142,6 @@ h1, h2, h4, p{
 }
 
 
-
-.loading{
-  text-align: center;
-}
-
-.comments {
-  padding: 0;
-  list-style: none;
-}
-
-.comment{
-  border: 1px solid #586849;
-  padding: 1em;
-  margin-bottom: 1em;
-}
-
-.comment-author,
-.comment-body{
-  margin: 0;
-  margin-bottom: .7em;
-}
-
-.comment-author{
-  color: #52623b;
-  text-transform: capitalize;
-  font-weight: bolder;
-}
-
-.comment-body{
-  color: #444;
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-.date-created,
-.comment-votes{
-  color: #1f6551;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: .75em;
-}
-
-.comment-votes{
-  display: flex;
-}
-
-
-
-
-
 .comment-details{
   display: flex;
   justify-content: space-between;
@@ -205,12 +155,90 @@ h1, h2, h4, p{
   padding: .55rem;
   border-radius: 3px;
 }
+
 .comment-link:hover,
 .comment-link:focus{
   background-color: #cd7a2d;
   color: #ccc;
 }
 
+.loading{
+  text-align: center;
+}
+
+.comment-group{
+  padding: 1em;
+}
+
+.comment-input {
+  padding: 1.5em;
+  font-size: 1rem;
+  box-shadow: inset 0 -2em 2em rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+
+.post-comment-btn{
+  display: block;
+  padding: .5em 1.5em;
+  background-color: #544CA6;
+  color: #ccc;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.post-comment-btn:hover,
+.post-comment-btn:focus {
+  outline: 0;
+  background-color: #cd7a2d;
+}
+.comments {
+  padding: 0;
+  list-style: none;
+}
+
+.comment{
+  background: #eee0bd;
+  padding: 1em;
+  margin: 0 1em 1em 1em;
+  border-radius: 3px;
+  box-shadow: inset 0 -2em 2em rgba(0, 0, 0, 0.1)
+}
+
+.comment-author,
+.comment-body{
+  margin: 0;
+  margin-bottom: .7em;
+}
+
+.comment-author{
+  color: #847dcb;
+  text-transform: capitalize;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.comment-body{
+  color: rgb(112, 112, 112);
+  font-size: 1.1rem;
+}
+
+.date-created,
+.comment-votes{
+  color: #544CA6;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .75rem;
+}
+
+.comment-votes{
+  display: flex;
+}
 
 
 .delete-comment {
@@ -218,6 +246,10 @@ h1, h2, h4, p{
   cursor: pointer;
 }
 
+
+
+
+/* USERS */
 .users {
   padding: 1em 0;
   list-style: none;
@@ -296,25 +328,6 @@ h1, h2, h4, p{
   font-weight: bold;
 }
 
-.comment-group {
-  width: 70%;
-  margin-top: 1em;
-  display: flex;
-}
-.comment-input {
-  width: 80%;
-  margin-right: .5em;
-  padding: 1em .2em;
-  background: #dadbdd;
-}
-
-.comment-input,
-.post-comment-btn {
-  border: 0;
-  outline: 1px solid #52623b;
-  border-radius: 10px;
-};
-.post-comment-btn { cursor: pointer; }
 
 .error-msg {
   color: #52623b;
@@ -329,5 +342,84 @@ h1, h2, h4, p{
   text-align: center;
   color: #ccc;
   font-size: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 480px) {
+  .nav-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links{
+    display: flex;
+    border-bottom: none;
+  }
+
+  .link{
+    border-bottom: 0;
+    margin-left: 1em;
+  };
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-container{
+    width: 100%;
+  }
+
+  .header{
+    font-size: 1.8rem;
+  }
+  .articles-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .article{
+    flex: 1 25%;
+  }
+
+  .link{
+    font-size: 1.1rem;
+  }
+
+  .article-author{
+    font-size: .95rem;
+  }
+
+  .article-topic{
+    font-size: 1.5rem;
+  }
+  .article-title{
+    font-size: 1.4rem;
+  }
+
+  .article-body{
+    font-size: 1.25rem;
+    margin-bottom: 1.5em;
+  }
+  .sort-drop-down{
+    font-size: 1rem;
+  }
+
+  .comment-group{
+    width: 50%;
+    background-color: #f5f3ef;
+    margin: 0 auto;
+  }
+
+  .comment-input{
+    width: 95%;
+  }
+
+  .comment {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+  }
 }
 
